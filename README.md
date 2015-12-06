@@ -52,7 +52,7 @@ export default class MyApp extends React.Component {
 __IMPORTANT:__ Before you carry on, you should take note how the resizing is done for this component: 
 * Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
 * All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
----
+
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
 ```javascript
