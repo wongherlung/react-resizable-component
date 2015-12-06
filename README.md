@@ -73,29 +73,29 @@ let style = {
 All props that are passed into `ResizableBox` are __optional__.
 
 #### 2.1 `height` (number)
-default: 50
+_default: 50_
 
 Specifies the height of the component in pixels
 ```javascript
-<ResizableBox height={250}>
+<ResizableBox height={50}>
   <div>
     My own stuff...
   </div>
 </ResizableBox>
 ```
 #### 2.2 `width` (number) 
-default: 250
+_default: 250_
 
 Specifies the width of the component in pixels
 ```javascript
-<ResizableBox width={50}>
+<ResizableBox width={250}>
   <div>
     My own stuff...
   </div>
 </ResizableBox>
 ```
-#### 2.1 `direction` ('s' || 'e' || 'se')
-default: 's'
+#### 2.3 `direction` ('s' || 'e' || 'se')
+_default: 's'_
 
 Specifies the direction of which the component can extend.
 *`'s'` -> South / downwards
@@ -108,5 +108,32 @@ Specifies the direction of which the component can extend.
   </div>
 </ResizableBox>
 ```
----
-### 3. CSS
+#### 2.4 `onStartResize` (func)
+Callback that will be invoked when resizing starts. Width and height of component will be available. See below:
+```javascript
+myFunc(width, height) {
+  console.log('Width: ' + width);
+  console.log('Height: ' + height);
+}
+...
+<ResizableBox onStartResize={this.myFunc}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+#### 2.5 `onDuringResize` (func)
+Callback that will be invoked when the size of the component changes. Width and height of component will be available. See below:
+```javascript
+// Note that this will be called only when the component is undergoing resizing and will be called multiple times.
+myFunc(width, height) {
+  console.log('Width: ' + width);
+  console.log('Height: ' + height);
+}
+...
+<ResizableBox onDuringResize={this.myFunc}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
