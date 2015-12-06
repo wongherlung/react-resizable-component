@@ -53,8 +53,26 @@ __IMPORTANT:__ Before you carry on, you should take note how the resizing is don
 * Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
 * All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
 
+Index
 * [Children](#1-children)
 * [Props](#2-props)
+  * [height](#21-height-number)
+  * [width](#22-width-number)
+  * [direction](#23-direction-s--e--se)
+  * [onStartResize](#24-onstartresize-func)
+  * [onDuringResize](#25-onduringresize-func)
+  * [onStopResize](#26-onstopresize-func)
+  * [onEachStep](#27-oneachstep-func)
+  * [options](#28-options-object)
+    * minHeight
+    * minWidth
+    * maxHeight
+    * maxWidth
+    * lockAspectRatio
+    * step
+    * cursorMargin
+    * allowGhostResize
+  * [cssStyles](#28-cssstyles-func)
 
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
