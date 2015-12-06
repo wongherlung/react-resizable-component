@@ -187,13 +187,29 @@ let myOptions = {
   // Width/Height of handle for resizing, region of component where user can click to start resizing
   cursorMargin: 20, // default is set to 10 pixels
   
-  // Ghost resize does not change the size of the component, but only allows you to resize an absolutey positioned semi-transparent     // div
+  // Ghost resize does not change the size of the component, but only allows you to resize an absolutey positioned semi-transparent
+  // div. This is to be used in conjunction with onStopResize and step to achieve something like Microsoft Excel's drag down formula
+  // feature.
   allowGhostResize: true // default is set to false
 };
-
+...
 <ResizableBox options={myOptions}>
   <div>
     My own stuff...
   </div>
 </ResizableBox>
 ```
+#### 2.8 `cssStyles` (func)
+Custom styling for `ResizableBox`. __Do not__ change the `position`, `width` and `height` attributes as it might affect the behaviour of this component.
+```javascript
+let customStyles = {
+  marginTop: this.state.marginBetBoxes + 'px',
+  backgroundColor: 'transparent'
+};
+...
+<ResizableBox cssStyles={customStyles}>
+  <MyOtherComponent/>
+</ResizableBox>
+```
+## License
+MIT
