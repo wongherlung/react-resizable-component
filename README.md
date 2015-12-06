@@ -38,6 +38,13 @@ export default class MyApp extends React.Component {
       marginTop: this.state.marginBetBoxes + 'px',
       backgroundColor: 'transparent'
     };
+    
+    return <div> // NOTE that this parent div should be larger than ResizableBox, if not it can't be resized
+      <ResizableBox cssStyles={customStyles}>
+        <MyOtherComponent/> // Be sure to give your component 100% height and width for it to be resizable
+      </ResizableBox>
+    </div>;
   }
 }
 ```
+## Docs
