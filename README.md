@@ -72,16 +72,18 @@ let style = {
 ### 2. Props
 All props that are passed into `ResizableBox` are __optional__.
 
-#### 2.1 `height` (number) _default: 50_
+#### 2.1 `height` (number)
+default: 50
 Specifies the height of the component in pixels
 ```javascript
-<ResizableBox height={50}>
+<ResizableBox height={250}>
   <div>
     My own stuff...
   </div>
 </ResizableBox>
 ```
-#### 2.2 `width` (number) _default: 250_
+#### 2.2 `width` (number) 
+default: 250
 Specifies the width of the component in pixels
 ```javascript
 <ResizableBox width={50}>
@@ -90,11 +92,12 @@ Specifies the width of the component in pixels
   </div>
 </ResizableBox>
 ```
-#### 2.1 `direction` ('s' || 'e' || 'se') _default: 's'_
+#### 2.1 `direction` ('s' || 'e' || 'se')
+default: 's'
 Specifies the direction of which the component can extend.
-`'s'` -> South / downwards
-`'e'` -> East / rightwards
-`'se'` -> South-east / downwards and rightwards
+*`'s'` -> South / downwards
+*`'e'` -> East / rightwards
+*`'se'` -> South-east / downwards and rightwards
 ```javascript
 <ResizableBox direction="se">
   <div>
