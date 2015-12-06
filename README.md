@@ -53,6 +53,9 @@ __IMPORTANT:__ Before you carry on, you should take note how the resizing is don
 * Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
 * All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
 
+### Index
+* [Children](https://github.com/wongherlung/react-resizable-component#1-children)
+
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
 ```javascript
