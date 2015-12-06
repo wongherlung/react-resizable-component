@@ -221,7 +221,7 @@ let myOptions = {
   </div>
 </ResizableBox>
 ```
-#### 2.8 `cssStyles` (func)
+#### 2.8 `cssStyles` (object)
 Custom styling for `ResizableBox`. __Do not__ change the `position`, `width` and `height` attributes as it might affect the behaviour of this component.
 ```javascript
 let customStyles = {
