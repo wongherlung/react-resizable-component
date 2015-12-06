@@ -1,0 +1,23 @@
+{
+  "name": "react-resizable-component",
+  "version": "1.0.0",
+  "description": "A simple React resizable component that comes with features that you might need.",
+  "main": "ResizableComponent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "keywords": [
+    "react",
+    "js",
+    "resizeable",
+    "box",
+    "component",
+    "resize"
+  ],
+  "author": "Delon Wong Her Laang <wongherlung@gmail.com> (https://github.com/wongherlung)",
+  "license": "MIT"
+}
