@@ -26,4 +26,18 @@ Simply run:
 npm install react-resizable-component --save
 ```
 ## Usage
+```javascript
+// Simple example shown using ES6
+import ResizableBox from 'react-resizable-component';
 
+export default class MyApp extends React.Component {
+  render() {
+  
+    // Custom CSS for ResizableBox
+    let customStyles = {
+      marginTop: this.state.marginBetBoxes + 'px',
+      backgroundColor: 'transparent'
+    };
+  }
+}
+```
