@@ -37,7 +37,7 @@ var ResizableComponent = React.createClass({
 		};
 	},
 
-	propTypes: function() {
+	propTypes: {
 		children: React.PropTypes.element.isRequired,
 		direction: React.PropTypes.oneOf(['s', 'e', 'se']),
 
