@@ -52,7 +52,7 @@ export default class MyApp extends React.Component {
 __IMPORTANT:__ Before you carry on, you should take note how the resizing is done for this component: 
 * Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
 * All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
-
+---
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
 ```javascript
@@ -68,13 +68,13 @@ let style = {
   </div>
 </ResizableBox>
 ```
-
+---
 ### 2. Props
 All props that are passed into `ResizableBox` are __optional__.
 
-#### height (number)
-Specifies the height is the component in pixels
+#### 2.1 `height` (number)
 _Default: 50_
+Specifies the height is the component in pixels
 ```javascript
 <ResizableBox height={50}>
   <div>
@@ -82,5 +82,5 @@ _Default: 50_
   </div>
 </ResizableBox>
 ```
-
+---
 ### 3. CSS
