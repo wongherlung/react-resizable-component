@@ -53,7 +53,7 @@ __IMPORTANT:__ Before you carry on, you should take note how the resizing is don
 * Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
 * All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
 
-### Children
+### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
 ```javascript
 let style = {
@@ -69,7 +69,18 @@ let style = {
 </ResizableBox>
 ```
 
-### Props
+### 2. Props
 All props that are passed into `ResizableBox` are __optional__.
 
-#### 
+#### height (number)
+Specifies the height is the component in pixels
+_Default: 50_
+```javascript
+<ResizableBox height={50}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+
+### 3. CSS
