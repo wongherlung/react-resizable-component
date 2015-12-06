@@ -16,8 +16,8 @@ The main features of this component are as follows:
   * `onStopResize`
   * `onEachStep`
 * Ghost resizing
- * Resizes a transparent absolutely positioned `div` instead of the original component.
- * To be used in conjunction with `onStopResize` to achieve something like __Microsoft Office Excel's drag down function__.
+  * Resizes a transparent absolutely positioned `div` instead of the original component.
+  * To be used in conjunction with `onStopResize` to achieve something like __Microsoft Office Excel's drag down function__.
 
 ## Installation
 This module does not need any other dependencies except `React` and `ReactDOM`. No `jQuery` needed.
