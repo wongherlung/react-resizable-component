@@ -41,6 +41,7 @@ export default class MyApp extends React.Component {
     
     return <div> // NOTE that this parent div should be larger than ResizableBox, if not it can't be resized
       <ResizableBox cssStyles={customStyles}>
+        // A children component is *required*.
         <MyOtherComponent/> // Be sure to give your component 100% height and width for it to be resizable
       </ResizableBox>
     </div>;
@@ -48,3 +49,27 @@ export default class MyApp extends React.Component {
 }
 ```
 ## Docs
+__IMPORTANT:__ Before you carry on, you should take note how the resizing is done for this component: 
+* Every `ResizableBox` has to be enclosed in a larger `div` for resizing to happen. 
+* All `eventListeners` for resizing will be attached to the __parent__ of `ResizableBox`.
+
+### Children
+A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
+```javascript
+let style = {
+  width: '100%',
+  height: '100%'
+};
+
+<ResizableBox cssStyles={customStyles}>
+  // A children component is *required*.
+  <div style={style}>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+
+### Props
+All props that are passed into `ResizableBox` are __optional__.
+
+#### 
