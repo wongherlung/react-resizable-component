@@ -74,6 +74,7 @@ All props that are passed into `ResizableBox` are __optional__.
 
 #### 2.1 `height` (number)
 default: 50
+
 Specifies the height of the component in pixels
 ```javascript
 <ResizableBox height={250}>
@@ -84,6 +85,7 @@ Specifies the height of the component in pixels
 ```
 #### 2.2 `width` (number) 
 default: 250
+
 Specifies the width of the component in pixels
 ```javascript
 <ResizableBox width={50}>
@@ -94,6 +96,7 @@ Specifies the width of the component in pixels
 ```
 #### 2.1 `direction` ('s' || 'e' || 'se')
 default: 's'
+
 Specifies the direction of which the component can extend.
 *`'s'` -> South / downwards
 *`'e'` -> East / rightwards
