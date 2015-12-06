@@ -4,7 +4,8 @@
   "description": "A simple React resizable component that comes with features that you might need.",
   "main": "ResizableComponent.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "jsx ResizableComponent.jsx > ResizableComponent.js",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "react": "^0.14.0",
@@ -18,6 +19,14 @@
     "component",
     "resize"
   ],
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
   "author": "Delon Wong Her Laang <wongherlung@gmail.com> (https://github.com/wongherlung)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react-tools": "^0.13.3"
+  }
 }

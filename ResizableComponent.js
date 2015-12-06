@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var ResizableComponent = React.createClass({
+var ResizableComponent = React.createClass({displayName: "ResizableComponent",
 	getInitialState: function() {
 		return {
 			// Mouse events
@@ -288,14 +288,14 @@ var ResizableComponent = React.createClass({
 				var css = this.props.ghostCssStyles
 				for (var prop in css) ghostDivStyles[prop] = css[prop];
 			}
-			highlightDiv = <div className="ghostDiv" style={ghostDivStyles}></div>
+			highlightDiv = React.createElement("div", {className: "ghostDiv", style: ghostDivStyles})
 		}
 
-		return <div className="outer-box-container" style={outerDivStyle}>
-			{highlightDiv}
-			<div className="resize-handler" style={resizeHandlerStyle} onMouseDown={this._startDrag}></div>
-			{this.props.children}
-		</div>;
+		return React.createElement("div", {className: "outer-box-container", style: outerDivStyle}, 
+			highlightDiv, 
+			React.createElement("div", {className: "resize-handler", style: resizeHandlerStyle, onMouseDown: this._startDrag}), 
+			this.props.children
+		);
 	}
 });
 
