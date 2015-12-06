@@ -98,9 +98,11 @@ Specifies the width of the component in pixels
 _default: 's'_
 
 Specifies the direction of which the component can extend.
+
 *`'s'` -> South / downwards
 *`'e'` -> East / rightwards
 *`'se'` -> South-east / downwards and rightwards
+
 ```javascript
 <ResizableBox direction="se">
   <div>
