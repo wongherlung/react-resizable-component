@@ -98,10 +98,11 @@ Specifies the width of the component in pixels
 _default: 's'_
 
 Specifies the direction of which the component can extend.
+`'s'` -> South / downwards
 
-*`'s'` -> South / downwards
-*`'e'` -> East / rightwards
-*`'se'` -> South-east / downwards and rightwards
+`'e'` -> East / rightwards
+
+`'se'` -> South-east / downwards and rightwards
 
 ```javascript
 <ResizableBox direction="se">
@@ -134,6 +135,63 @@ myFunc(width, height) {
 }
 ...
 <ResizableBox onDuringResize={this.myFunc}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+#### 2.6 `onStopResize` (func)
+Callback that will be invoked when resizing is stopped. Resizing only stops on `mouseup` or when the mouse leaves the parent `div`.
+Width and height of component will be available. See below:
+```javascript
+myFunc(width, height) {
+  console.log('Width: ' + width);
+  console.log('Height: ' + height);
+}
+...
+<ResizableBox onStopResize={this.myFunc}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+#### 2.7 `onEachStep` (func)
+Callback that will be invoked on __each__ interval/step only when `step` is provided.
+Width and height of component will be available. See below:
+```javascript
+// Note that this will be called only when the component is undergoing resizing and will be called multiple times.
+myFunc(width, height) {
+  console.log('Width: ' + width);
+  console.log('Height: ' + height);
+}
+...
+<ResizableBox onEachStep={this.myFunc}>
+  <div>
+    My own stuff...
+  </div>
+</ResizableBox>
+```
+#### 2.8 `options` (object)
+See below for list of options available:
+```javascript
+let myOptions = {
+  minHeight: 50, // default is set to initial height of component
+  minWidth: 250, // default is set to initial width of component
+  maxHeight: 500, // default is set to Infinity
+  maxWidth: 500, // default is set to Infinity
+  lockAspectRatio: 50, // default is set to Infinity; Only works when direction="se"
+  
+  // Box only resizes at a set interval of pixels
+  step: 50, // default is set to 1 (i.e. there is no step)
+  
+  // Width/Height of handle for resizing, region of component where user can click to start resizing
+  cursorMargin: 20, // default is set to 10 pixels
+  
+  // Ghost resize does not change the size of the component, but only allows you to resize an absolutey positioned semi-transparent     // div
+  allowGhostResize: true // default is set to false
+};
+
+<ResizableBox options={myOptions}>
   <div>
     My own stuff...
   </div>
