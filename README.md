@@ -1,6 +1,6 @@
 # react-resizable-component
 
-DEMO: To be available soon...
+DEMO: [http://herlaang.com/resizable.html](http://herlaang.com/resizable.html)
 
 GITHUB: [https://github.com/wongherlung/react-resizable-component](https://github.com/wongherlung/react-resizable-component)
 
