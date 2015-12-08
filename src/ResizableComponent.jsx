@@ -77,6 +77,11 @@ var ResizableComponent = React.createClass({
 	    var parentAttrName = ReactDOM.findDOMNode(this).parentNode.attributes[0].name;
 	    var parentAttrValue = ReactDOM.findDOMNode(this).parentNode.attributes[0].value;
 
+	    if (ReactDOM.findDOMNode(this).parentNode.attributes.length > 1) {
+			parentAttrName = ReactDOM.findDOMNode(this).parentNode.attributes[1].name;
+			parentAttrValue = ReactDOM.findDOMNode(this).parentNode.attributes[1].value;
+		}
+
 	    // Attaches event listeners to parent div
 	    document.querySelector('[' + parentAttrName + '="' + parentAttrValue + '"]').addEventListener('mousemove', (e) => {
 	      _this._resizeDiv(e);
@@ -245,6 +250,11 @@ var ResizableComponent = React.createClass({
 		var _this = this;
 		var parentAttrName = ReactDOM.findDOMNode(this).parentNode.attributes[0].name;
 		var parentAttrValue = ReactDOM.findDOMNode(this).parentNode.attributes[0].value;
+
+		if (ReactDOM.findDOMNode(this).parentNode.attributes.length > 1) {
+			parentAttrName = ReactDOM.findDOMNode(this).parentNode.attributes[1].name;
+			parentAttrValue = ReactDOM.findDOMNode(this).parentNode.attributes[1].value;
+		}
 
 		// Attaches event listeners to parent div
 		document.querySelector('[' + parentAttrName + '="' + parentAttrValue + '"]').style.userSelect = highlight ? 'all' : 'none';
