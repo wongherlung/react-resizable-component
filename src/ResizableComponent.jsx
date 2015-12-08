@@ -288,7 +288,7 @@ var ResizableComponent = React.createClass({
 				var css = this.props.ghostCssStyles
 				for (var prop in css) ghostDivStyles[prop] = css[prop];
 			}
-			highlightDiv = <div className="ghostDiv" style={ghostDivStyles}></div>
+			highlightDiv = <div className="ghostDiv" style={ghostDivStyles}></div>;
 		}
 
 		return <div className="outer-box-container" style={outerDivStyle}>
