@@ -243,6 +243,7 @@ var ResizableComponent = React.createClass({
 			};
 		}
 
+		resizeHandlerStyle['zIndex'] = 1;
 		return resizeHandlerStyle;
 	},
 

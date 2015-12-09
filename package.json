@@ -1,10 +1,10 @@
 {
   "name": "react-resizable-component",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "A simple React resizable component that comes with features that you might need.",
   "main": "dist/ResizableComponent.js",
   "scripts": {
-    "build": "babel --presets react ./src --out-dir ./dist",
+    "build": "jsx ./src/ResizableComponent.jsx > ./dist/ResizableComponent.js",
     "prepublish": "npm run build"
   },
   "dependencies": {
