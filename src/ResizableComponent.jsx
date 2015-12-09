@@ -20,6 +20,7 @@ var ResizableComponent = React.createClass({
 			maxHeight: this.props.options.maxHeight ? this.props.options.maxHeight : Infinity,
 			maxWidth: this.props.options.maxWidth ? this.props.options.maxWidth : Infinity,
 			lockAspectRatio: this.props.options.lockAspectRatio ? this.props.options.lockAspectRatio : false,
+			fullWidth: this.props.options.fullWidth ? this.props.options.fullWidth : false,
 
 			// Stepping of resizing
 			step: this.props.options.step ? this.props.options.step : 1,
@@ -265,7 +266,8 @@ var ResizableComponent = React.createClass({
 	render: function() {
 		var outerDivStyle = {
 			backgroundColor: 'transparent',
-			width: (!this.state.allowGhostResize) ? this.state.boxWidth + 'px' : this.state.originalBoxWidth,
+			width: (!this.state.allowGhostResize) ? this.state.boxWidth + 'px' : 
+					(this.state.fullWidth ? '100%' : this.state.originalBoxWidth),
 			height: (!this.state.allowGhostResize) ? this.state.boxHeight + 'px' : this.state.originalBoxHeight,
 			cursor: 'default',
 			position: 'relative'
@@ -287,7 +289,7 @@ var ResizableComponent = React.createClass({
 				display: this.state.mouseHeldDown ? 'block' : 'none',
 				backgroundColor: '#000000',
 				opacity: '0.3',
-				width: this.state.boxWidth + 'px',
+				width: (this.state.fullWidth) ? '100%' :this.state.boxWidth + 'px',
 				height: this.state.boxHeight + 'px',
 				cursor: 'default',
 				position: 'absolute',

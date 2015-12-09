@@ -75,6 +75,7 @@ Index
     * cursorMargin
     * allowGhostResize
   * [cssStyles](#28-cssstyles-func)
+  * [cssStyles](#29-ghostcssstyles-func)
 
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
@@ -214,7 +215,10 @@ let myOptions = {
   // Ghost resize does not change the size of the component, but only allows you to resize an absolutey positioned semi-transparent
   // div. This is to be used in conjunction with onStopResize and step to achieve something like Microsoft Excel's drag down formula
   // feature.
-  allowGhostResize: true // default is set to false
+  allowGhostResize: true, // default is set to false
+
+  // Set ResizableBox to full width to match parent, ignoring any width given
+  fullWidth: true // default is set to false
 };
 ...
 <ResizableBox options={myOptions}>
@@ -232,6 +236,19 @@ let customStyles = {
 };
 ...
 <ResizableBox cssStyles={customStyles}>
+  <MyOtherComponent/>
+</ResizableBox>
+```
+
+#### 2.9 `ghostCssStyles` (object)
+Custom styling for `ResizableBox`. __Do not__ change the `position`, `width` and `height` attributes as it might affect the behaviour of this component.
+```javascript
+let customStyles = {
+  marginTop: this.state.marginBetBoxes + 'px',
+  backgroundColor: 'transparent'
+};
+...
+<ResizableBox ghostCssStyles={customStyles}>
   <MyOtherComponent/>
 </ResizableBox>
 ```
