@@ -15,15 +15,15 @@ var ResizableComponent = React.createClass({
 			initialBoxWidth: this.props.width,
 			boxHeight: this.props.height,
 			boxWidth: this.props.width,
-			minHeight: this.props.options.minHeight ? this.props.options.minHeight : this.props.height,
-			minWidth: this.props.options.minWidth ? this.props.options.minWidth : this.props.width,
-			maxHeight: this.props.options.maxHeight ? this.props.options.maxHeight : Infinity,
-			maxWidth: this.props.options.maxWidth ? this.props.options.maxWidth : Infinity,
-			lockAspectRatio: this.props.options.lockAspectRatio ? this.props.options.lockAspectRatio : false,
-			fullWidth: this.props.options.fullWidth ? this.props.options.fullWidth : false,
+			minHeight: this.props.options.minHeight || this.props.height,
+			minWidth: this.props.options.minWidth || this.props.width,
+			maxHeight: this.props.options.maxHeight || Infinity,
+			maxWidth: this.props.options.maxWidth || Infinity,
+			lockAspectRatio: this.props.options.lockAspectRatio || false,
+			fullWidth: this.props.options.fullWidth || false,
 
 			// Stepping of resizing
-			step: this.props.options.step ? this.props.options.step : 1,
+			step: this.props.options.step || 1,
 			currStepY: 0,
 			currStepX: 0,
 			steppingMargin: this.props.steppingMargin,
@@ -31,10 +31,10 @@ var ResizableComponent = React.createClass({
 			originalBoxHeight: this.props.height,
 
 			// Width of resizable handle
-			cursorMargin: this.props.options.cursorMargin ? this.props.options.cursorMargin : this.props.cursorMargin,
+			cursorMargin: this.props.options.cursorMargin || this.props.cursorMargin,
 
 			// Ghost Resizing
-			allowGhostResize: this.props.options.allowGhostResize ? this.props.options.allowGhostResize : false
+			allowGhostResize: this.props.options.allowGhostResize || false
 		};
 	},
 
