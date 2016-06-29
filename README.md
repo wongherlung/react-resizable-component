@@ -204,7 +204,7 @@ let myOptions = {
   minWidth: 250, // default is set to initial width of component
   maxHeight: 500, // default is set to Infinity
   maxWidth: 500, // default is set to Infinity
-  lockAspectRatio: 50, // default is set to Infinity; Only works when direction="se"
+  lockAspectRatio: true, // default is set to false; Only works when direction="se"
   
   // Box only resizes at a set interval of pixels
   step: 50, // default is set to 1 (i.e. there is no step)
