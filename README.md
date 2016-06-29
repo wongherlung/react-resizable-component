@@ -42,7 +42,7 @@ export default class MyApp extends React.Component {
     };
     
     return <div> // NOTE that this parent div should be larger than ResizableBox, if not it can't be resized
-      <ResizableBox cssStyles={customStyles}>
+      <ResizableBox className="my-custom-class-name" style={customStyles}>
         // A children component is *required*.
         <MyOtherComponent/> // Be sure to give your component 100% height and width for it to be resizable
       </ResizableBox>
@@ -74,8 +74,9 @@ Index
     * step
     * cursorMargin
     * allowGhostResize
-  * [cssStyles](#28-cssstyles-func)
-  * [cssStyles](#29-ghostcssstyles-func)
+  * [styles](#281-style-obj)
+  * [className](#282-className-obj)
+  * [cssStyles](#29-ghostcssstyles-obj)
 
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
@@ -227,7 +228,7 @@ let myOptions = {
   </div>
 </ResizableBox>
 ```
-#### 2.8 `cssStyles` (object)
+#### 2.8.1 `style` (object)
 Custom styling for `ResizableBox`. __Do not__ change the `position`, `width` and `height` attributes as it might affect the behaviour of this component.
 ```javascript
 let customStyles = {
@@ -235,7 +236,15 @@ let customStyles = {
   backgroundColor: 'transparent'
 };
 ...
-<ResizableBox cssStyles={customStyles}>
+<ResizableBox style={customStyles}>
+  <MyOtherComponent/>
+</ResizableBox>
+```
+
+#### 2.8.2 `className` (object)
+Custom class name for `ResizableBox`. __Do not__ change the `position`, `width` and `height` attributes as it might affect the behaviour of this component.
+```javascript
+<ResizableBox className="my-custom-class-name">
   <MyOtherComponent/>
 </ResizableBox>
 ```
@@ -252,5 +261,6 @@ let customStyles = {
   <MyOtherComponent/>
 </ResizableBox>
 ```
+
 ## License
 MIT
