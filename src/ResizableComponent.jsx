@@ -47,7 +47,8 @@ var ResizableComponent = React.createClass({
 		height: React.PropTypes.number,
 
 		// Styling
-		cssStyles: React.PropTypes.object,
+		className: React.PropTypes.string,
+		style: React.PropTypes.object,
 		ghostCssStyles: React.PropTypes.object,
 
 		// Callbacks
@@ -275,8 +276,8 @@ var ResizableComponent = React.createClass({
 		};
 
 		// Merge in any custom styles and overwrite existing styles (if any)
-		if (this.props.cssStyles) {
-			var customStyles = this.props.cssStyles;
+		if (this.props.style) {
+			var customStyles = this.props.style;
 			for (var prop in customStyles) outerDivStyle[prop] = customStyles[prop];
 		}
 
@@ -304,7 +305,7 @@ var ResizableComponent = React.createClass({
 			highlightDiv = <div className="ghostDiv" style={ghostDivStyles}></div>;
 		}
 
-		return <div className="outer-box-container" style={outerDivStyle}>
+		return <div className={this.props.className} style={outerDivStyle}>
 			{highlightDiv}
 			<div className="resize-handler" style={resizeHandlerStyle} onMouseDown={this._startDrag}></div>
 			{this.props.children}
