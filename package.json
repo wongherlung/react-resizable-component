@@ -8,8 +8,8 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "keywords": [
     "react",
