@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var PropTypes = require('prop-types');
 
 var ResizableComponent = React.createClass({
 	getInitialState: function() {
@@ -39,26 +40,26 @@ var ResizableComponent = React.createClass({
 	},
 
 	propTypes: {
-		children: React.PropTypes.element.isRequired,
-		direction: React.PropTypes.oneOf(['s', 'e', 'se']),
+		children: PropTypes.element.isRequired,
+		direction: PropTypes.oneOf(['s', 'e', 'se']),
 
 		// Dimensions
-		width: React.PropTypes.number,
-		height: React.PropTypes.number,
+		width: PropTypes.number,
+		height: PropTypes.number,
 
 		// Styling
-		className: React.PropTypes.string,
-		style: React.PropTypes.object,
-		ghostCssStyles: React.PropTypes.object,
+		className: PropTypes.string,
+		style: PropTypes.object,
+		ghostCssStyles: PropTypes.object,
 
 		// Callbacks
-		onStartResize: React.PropTypes.func,
-		onStopResize: React.PropTypes.func,
-		onEachStep: React.PropTypes.func,
-		onDuringResize: React.PropTypes.func,
+		onStartResize: PropTypes.func,
+		onStopResize: PropTypes.func,
+		onEachStep: PropTypes.func,
+		onDuringResize: PropTypes.func,
 
 		// Other options
-		options: React.PropTypes.object
+		options: PropTypes.object
 	},
 
 	getDefaultProps: function() {
