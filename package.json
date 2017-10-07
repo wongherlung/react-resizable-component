@@ -1,10 +1,10 @@
 {
   "name": "react-resizable-component",
-  "version": "1.0.16",
+  "version": "1.1.0",
   "description": "A simple React resizable component that comes with features that you might need.",
   "main": "dist/ResizableComponent.js",
   "scripts": {
-    "build": "jsx ./src/ResizableComponent.jsx > ./dist/ResizableComponent.js",
+    "build": "babel src --presets babel-preset-env --plugins=transform-class-properties,transform-react-jsx --out-dir dist",
     "prepublish": "npm run build"
   },
   "dependencies": {
@@ -28,6 +28,10 @@
   "author": "Delon Wong Her Laang <wongherlung@gmail.com> (https://github.com/wongherlung)",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "react-tools": "^0.13.3"
   }
 }
