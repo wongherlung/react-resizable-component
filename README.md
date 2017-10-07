@@ -1,6 +1,6 @@
 # react-resizable-component
 
-DEMO: [http://herlaang.com/resizable.html](http://herlaang.com/resizable.html)
+DEMO: [https://herlaang.com/resizable.html](http://herlaang.com/resizable.html)
 
 GITHUB: [https://github.com/wongherlung/react-resizable-component](https://github.com/wongherlung/react-resizable-component)
 
@@ -76,7 +76,7 @@ Index
     * allowGhostResize
   * [styles](#281-style-obj)
   * [className](#282-className-obj)
-  * [cssStyles](#29-ghostcssstyles-obj)
+  * [ghostCssStyles](#29-ghostcssstyles-obj)
 
 ### 1. Children
 A child component must be provided, if not an error would be thrown. If you have no child component, just put it a `div` with `height: 100%` and `width: 100%`. See below:
