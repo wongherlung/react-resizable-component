@@ -4,7 +4,7 @@
   "description": "A simple React resizable component that comes with features that you might need.",
   "main": "dist/ResizableComponent.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-env --plugins=transform-class-properties,transform-react-jsx --out-dir dist",
+    "build": "babel src --presets babel-preset-env --plugins=transform-class-properties,transform-react-jsx,transform-react-remove-prop-types --out-dir dist",
     "prepublish": "npm run build"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.9",
     "babel-preset-env": "^1.6.0",
     "react-tools": "^0.13.3"
   }
